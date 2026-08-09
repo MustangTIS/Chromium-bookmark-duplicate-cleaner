@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <title>重複ブックマーク・マネージャー</title>
+  <style>
+    body { font-family: sans-serif; margin: 20px; background: #f4f6f9; color: #333; }
+    .container { max-width: 1000px; margin: 0 auto; background: #fff; padding: 20px; border-radius: 8px; box-shadow: 0 2px 5px rgba(0,0,0,0.1); }
+    .toolbar { display: flex; flex-wrap: wrap; gap: 10px; margin-bottom: 20px; align-items: center; }
+    button { padding: 10px 16px; font-size: 14px; cursor: pointer; border: none; border-radius: 4px; background: #007bff; color: white; }
+    button.danger { background: #dc3545; }
+    button.warning { background: #ffc107; color: #333; }
+    button.success { background: #28a745; }
+    button:hover { opacity: 0.9; }
+    .group { border: 1px solid #ddd; padding: 15px; margin-bottom: 15px; border-radius: 6px; background: #fafafa; }
+    .group-url { font-weight: bold; color: #0056b3; word-break: break-all; margin-bottom: 8px; }
+    .item { display: flex; align-items: center; justify-content: space-between; padding: 6px 0; border-bottom: 1px solid #eee; }
+    .item:last-child { border-bottom: none; }
+    .item-info { font-size: 13px; display: flex; align-items: center; gap: 8px; }
+    .meta { color: #666; font-size: 12px; }
+    #status-msg { margin-bottom: 15px; font-weight: bold; color: #333; }
+    .group-actions { margin-top: 8px; font-size: 12px; }
+    .group-actions a { cursor: pointer; color: #007bff; text-decoration: underline; margin-right: 15px; }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h2>重複ブックマーク・マネージャー</h2>
+    <div class="toolbar">
+      <button id="scan-btn">重複をスキャンする</button>
+      <button id="delete-selected-btn" class="danger">チェックした項目を削除</button>
+      <button id="auto-clean-btn" class="warning">一括自動整理（古い方を自動削除）</button>
+      <button id="backup-btn" class="success">現在の全ブックマークをバックアップ</button>
+    </div>
+    <div id="status-msg"></div>
+    <div id="results-area"></div>
+  </div>
+  <script src="options.js"></script>
+</body>
+</html>

@@ -1,0 +1,16 @@
+{
+  "manifest_version": 3,
+  "name": "Bookmark Duplicate Cleaner (FullView)",
+  "version": "1.0",
+  "description": "大量の重複ブックマークを専用タブで一覧表示し、手動または自動で整理します",
+  "permissions": [
+    "bookmarks"
+  ],
+  "options_page": "options.html",
+  "background": {
+    "service_worker": "background.js"
+  },
+  "action": {
+    "default_title": "重複ブックマークマネージャーを開く"
+  }
+}
