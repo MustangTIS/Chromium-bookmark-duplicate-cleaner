@@ -16,7 +16,7 @@ Chromium系ブラウザ（Chrome, Vivaldi等）のブックマークから重複
 ## 📥 ダウンロード・導入方法
 
 1. 以下のリンクから最新のZIPファイルをダウンロードします。
-   👉 [**bookmark-cleaner-v1.0.zip をダウンロードする**](https://github.com/MustangTIS/Chromium-bookmark-duplicate-cleaner/releases/download/v1.0/bookmark-cleaner-v1.0.zip)
+   👉 [**bookmark-cleaner-v1.1.zip をダウンロードする**](https://github.com/MustangTIS/Chromium-bookmark-duplicate-cleaner/releases/download/v1.1/bookmark-cleaner-v1.1.zip)
 
 2. ダウンロードしたZIPファイルを**解凍（展開）**します。
    > ⚠️ **注意**: ブラウザがこのフォルダを直接参照して動作するため、**解凍したフォルダは途中で移動・削除しない固定の場所（ドキュメントフォルダ内など）に置いてください。**
