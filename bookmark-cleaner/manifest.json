@@ -1,8 +1,8 @@
 {
   "manifest_version": 3,
-  "name": "Bookmark Duplicate Cleaner (FullView)",
-  "version": "1.0",
-  "description": "大量の重複ブックマークを専用タブで一覧表示し、手動または自動で整理します",
+  "name": "Chromium Bookmark Duplicate Cleaner",
+  "version": "1.1",
+  "description": "大量の重複ブックマークをYouTubeのURL正規化対応で賢く整理します",
   "permissions": [
     "bookmarks"
   ],
@@ -11,6 +11,12 @@
     "service_worker": "background.js"
   },
   "action": {
-    "default_title": "重複ブックマークマネージャーを開く"
+    "default_title": "重複ブックマークマネージャーを開く",
+    "default_icon": {
+      "48": "icon48.png"
+    }
+  },
+  "icons": {
+    "48": "icon48.png"
   }
 }
