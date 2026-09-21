@@ -5,6 +5,7 @@ Chromium系ブラウザ（Chrome, Vivaldi等）のブックマークから重複
 ## 特徴
 - **重複の自動検出**: 大量のブックマークから重複しているものをグループごとに一覧表示します。
 - **YouTubeのURL正規化対応**: URLにタイムスタンプ（`t=○○`）やパラメータがついていることで見落とされていた重複も、動画IDを基準にしてしっかり検出します。
+  - YouTube等のURLを綺麗に掃除を実行すると、ブックマーク内のYOUTUBEのURLから先の部分に出ていたパラーメーターを削除することができます。**【UPDATE v1.2 implementation!】**
 - **安心のバックアップ機能**: 整理・削除を行う前に、現在の全ブックマークをJSON形式で一括バックアップできます。
 - **柔軟な削除・整理**: 
   - チェックを入れた項目だけを手動で削除
@@ -16,7 +17,7 @@ Chromium系ブラウザ（Chrome, Vivaldi等）のブックマークから重複
 ## 📥 ダウンロード・導入方法
 
 1. 以下のリンクから最新のZIPファイルをダウンロードします。
-   👉 [**bookmark-cleaner-v1.1.zip をダウンロードする**](https://github.com/MustangTIS/Chromium-bookmark-duplicate-cleaner/releases/download/v1.1/bookmark-cleaner-v1.1.zip)
+   👉 [**bookmark-cleaner-v1.2.zip をダウンロードする**](https://github.com/MustangTIS/Chromium-bookmark-duplicate-cleaner/releases/download/v1.2/bookmark-cleaner-v1.2.zip)
 
 2. ダウンロードしたZIPファイルを**解凍（展開）**します。
    > ⚠️ **注意**: ブラウザがこのフォルダを直接参照して動作するため、**解凍したフォルダは途中で移動・削除しない固定の場所（ドキュメントフォルダ内など）に置いてください。**

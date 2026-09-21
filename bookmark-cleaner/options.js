@@ -185,3 +185,37 @@ document.getElementById('backup-btn').addEventListener('click', async () => {
   a.click();
   URL.revokeObjectURL(url);
 });
+// 4. YouTube等の不要なパラメータやハッシュを削除してURLを綺麗にクリーンアップする機能
+document.getElementById('clean-urls-btn').addEventListener('click', async () => {
+  if (!confirm('【URLクリーンアップ】全ブックマークを走査し、YouTubeの不要なパラメータ（再生位置やトラッキング等）や不要なハッシュがついているものを、スッキリした基本URLに一括で書き換えます。\n\n実行前に「現在の全ブックマークをバックアップ」を取ることをおすすめします。よろしいですか？')) {
+    return;
+  }
+
+  const statusMsg = document.getElementById('status-msg');
+  statusMsg.textContent = 'ブックマークのURLをクリーンアップ中...';
+
+  const tree = await chrome.bookmarks.getTree();
+  const allBookmarks = getAllBookmarks(tree[0]);
+
+  let updatedCount = 0;
+
+  for (const b of allBookmarks) {
+    const cleanedUrl = normalizeUrl(b.url); // 既存のnormalizeUrl関数を活用！
+    
+    // もし正規化前後でURLが変わる（＝不要なパラメータやハッシュが含まれていた）場合のみ更新
+    if (b.url !== cleanedUrl) {
+      try {
+        await chrome.bookmarks.update(b.id, { url: cleanedUrl });
+        updatedCount++;
+      } catch (e) {
+        console.error(`更新失敗 (ID: ${b.id}, URL: ${b.url}):`, e);
+      }
+    }
+  }
+
+  statusMsg.textContent = `クリーンアップ完了: ${updatedCount}件のURLを綺麗に整えました。`;
+  alert(`${updatedCount}件のブックマークURLをクリーンアップしました！`);
+  
+  // 必要に応じて自動で再スキャンを走らせる
+  runScan();
+});

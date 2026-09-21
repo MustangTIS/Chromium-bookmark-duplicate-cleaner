@@ -1,7 +1,7 @@
 {
   "manifest_version": 3,
   "name": "Chromium Bookmark Duplicate Cleaner",
-  "version": "1.1",
+  "version": "1.2",
   "description": "大量の重複ブックマークをYouTubeのURL正規化対応で賢く整理します",
   "permissions": [
     "bookmarks"
