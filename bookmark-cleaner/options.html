@@ -30,9 +30,19 @@
       <button id="scan-btn">重複をスキャンする</button>
       <button id="delete-selected-btn" class="danger">チェックした項目を削除</button>
       <button id="auto-clean-btn" class="warning">一括自動整理（古い方を自動削除）</button>
-      <!-- ▼ 新しく追加するボタン -->
       <button id="clean-urls-btn" style="background-color: #17a2b8; color: white;">YouTube等のURLを綺麗に掃除</button>
+      <button id="toggle-replace-btn" style="background-color: #6f42c1; color: white;">URLを置換</button>
       <button id="backup-btn" class="success">現在の全ブックマークをバックアップ</button>
+    </div>
+
+    <!-- ▼ 最初は非表示にしておき、「URLを置換」ボタンで表示するパネル -->
+    <div id="replace-panel" style="display: none; margin-bottom: 20px; padding: 12px; background: #f8f9fa; border: 1px solid #ddd; border-radius: 6px;">
+      <div class="toolbar" style="margin-bottom: 0;">
+        <input type="text" id="replace-from" placeholder="置換前（例: twitter.com）" style="padding: 8px 10px; font-size: 14px; border: 1px solid #ccc; border-radius: 4px; width: 220px;">
+        <span>→</span>
+        <input type="text" id="replace-to" placeholder="置換後（例: x.com）" style="padding: 8px 10px; font-size: 14px; border: 1px solid #ccc; border-radius: 4px; width: 220px;">
+        <button id="preview-replace-btn" style="background-color: #6f42c1; color: white;">対象を一覧表示</button>
+      </div>
     </div>
     <div id="status-msg"></div>
     <div id="results-area"></div>
