@@ -1,12 +1,13 @@
 # Chromium Bookmark Duplicate Cleaner
 
-Chromium系ブラウザ（Chrome, Vivaldi等）のブックマークから重複を検出し、スッキリ整理するための拡張機能です。
+Chromium系ブラウザ（Chrome, Vivaldi, Microsoft Edge等）のブックマークから重複を検出し、スッキリ整理するための拡張機能です。
 
 ## 特徴
 - **重複の自動検出**: 大量のブックマークから重複しているものをグループごとに一覧表示します。
 - **YouTubeのURL正規化対応**: URLにタイムスタンプ（`t=○○`）やパラメータがついていることで見落とされていた重複も、動画IDを基準にしてしっかり検出します。
-  - YouTube等のURLを綺麗に掃除を実行すると、ブックマーク内のYOUTUBEのURLから先の部分に出ていたパラーメーターを削除することができます。**【UPDATE v1.2 implementation!】**
-- **安心のバックアップ機能**: 整理・削除を行う前に、現在の全ブックマークをJSON形式で一括バックアップできます。
+  - YouTube等のURLを綺麗に掃除を実行すると、ブックマーク内のYouTubeのURLから余分なパラメータなどを削除して基本URLに整えることができます。
+- **URL一括置換機能**: 「URLを置換」ボタンから入力パネルを開き、指定した文字列（例：`twitter.com` → `x.com`）の置換候補を一覧プレビューできます。変換したくない項目はチェックを外して保留でき、チェックした項目だけをまとめて置換できます。**【UPDATE v1.3 implementation!】**
+- **安心のバックアップ機能**: 整理・削除・置換を行う前に、現在の全ブックマークをJSON形式で一括バックアップできます。
 - **柔軟な削除・整理**: 
   - チェックを入れた項目だけを手動で削除
   - 各グループで「最新1件だけ残す」などの一括選択ヘルパー
@@ -17,7 +18,8 @@ Chromium系ブラウザ（Chrome, Vivaldi等）のブックマークから重複
 ## 📥 ダウンロード・導入方法
 
 1. 以下のリンクから最新のZIPファイルをダウンロードします。
-   👉 [**bookmark-cleaner-v1.2.zip をダウンロードする**](https://github.com/MustangTIS/Chromium-bookmark-duplicate-cleaner/releases/download/v1.2/bookmark-cleaner-v1.2.zip)
+   👉 [**bookmark cleaner v1.3.zip をダウンロードする**](https://github.com/MustangTIS/Chromium-bookmark-duplicate-cleaner/releases/download/v1.3/bookmark%20cleaner%20v1.3.zip)
+   （※リリースページは [Releases](https://github.com/MustangTIS/Chromium-bookmark-duplicate-cleaner/releases) から確認できます）
 
 2. ダウンロードしたZIPファイルを**解凍（展開）**します。
    > ⚠️ **注意**: ブラウザがこのフォルダを直接参照して動作するため、**解凍したフォルダは途中で移動・削除しない固定の場所（ドキュメントフォルダ内など）に置いてください。**
