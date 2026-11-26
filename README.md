@@ -32,7 +32,7 @@ Chromium系ブラウザ（Chrome, Vivaldi, Microsoft Edge等）のブックマ�
 
 ---
 
-詳しくは、 [**マニュアルページ**](https://mustangtis.wjg.jp/bookmark-cleaner/index.html)をご覧下さい。
+詳しくは、 [**マニュアルページ**](https://mustangtis.wjg.jp/apps-manual/bookmark-cleaner/index.html)をご覧下さい。
 
 ---
 
